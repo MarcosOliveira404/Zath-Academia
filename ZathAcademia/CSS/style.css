@@ -1,0 +1,649 @@
+/* GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Header estilizado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff7f50; /* Cor laranja suave para destaque */
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    gap: 25px; /* Espaçamento entre os links */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff7f50; /* Destaque ao passar o mouse */
+}
+
+/* Estilos gerais para o corpo e seções */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#home {
+    padding-top: 100px; /* Para evitar sobreposição com o header fixo */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Seção de início (Home) */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Posiciona o texto à direita */
+    height: 100vh; /* Ocupa a altura total da tela */
+    background-image: url('../IMG/Home.jpg');/* Substitua pelo caminho da sua imagem */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: #fff;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adiciona um overlay escuro */
+    z-index: 1;
+}
+
+#home .motivational-text {
+    position: relative;
+    z-index: 2; /* Coloca o texto acima do overlay */
+    max-width: 50%;
+    padding: 20px;
+    text-align: left;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos para a seção Sobre */
+#about {
+    display: flex;
+    align-items: center;
+    padding: 60px 40px;
+    background-color: #f4f4f4;
+    height: 100vh; /* Ocupa toda a altura da tela */
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Espaçamento entre a imagem e o texto */
+    width: 100%; /* Garantir que a largura da seção ocupe 100% */
+}
+
+.about-image {
+    width: 50%;
+    max-width: 400px; /* Define um tamanho máximo para evitar imagens grandes demais */
+    height: auto;
+    border-radius: 8px; /* Deixa a imagem com cantos arredondados */
+}
+
+.about-text {
+    max-width: 50%;
+    font-size: 18px;
+    color: #333;
+}
+
+.about-text h2 {
+    font-size: 28px;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos para a seção de Serviços */
+#services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 60px 40px;
+    background-color: #000000;
+    height: 140vh; /* Ocupa toda a altura da tela */
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%; /* Ajusta a largura para dar um espaço ao redor dos blocos */
+    margin-bottom: 30px; /* Espaçamento entre os blocos */
+    background-color: #333333;
+    padding: 20px;
+    border-radius: 8px; /* Canto arredondado nos blocos */
+}
+
+.service-image {
+    width: 40%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+#services .service-item img {
+    width: 40%;
+    height: 200px; /* Defina a altura desejada */
+    object-fit: cover; /* Faz a imagem preencher o contêiner sem distorcer */
+    object-position: center; /* Centraliza a imagem dentro do contêiner */
+    border-radius: 8px; /* Opção para borda arredondada, se desejar */
+}
+
+
+#services .section-title {
+    font-size: 36px; /* Tamanho grande para destacar */
+    font-weight: bold; /* Em negrito */
+    color: #ffffff; /* Cor escura para contraste */
+    text-align: center; /* Alinha o título ao centro */
+    margin-bottom: 40px; /* Espaço abaixo do título */
+    text-transform: uppercase; /* Letras maiúsculas */
+    letter-spacing: 2px; /* Espaçamento entre as letras */
+}
+
+
+.service-description {
+    width: 55%;
+    padding-left: 20px;
+}
+
+.service-description h3 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.service-description p {
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos para a seção Preços */
+#pricing {
+    display: flex;
+    justify-content: space-around; /* Espaça os blocos igualmente */
+    align-items: flex-start; /* Alinha os blocos no topo */
+    padding: 60px 40px;
+    background-color: #f4f4f4;
+    height: 100vh; /* Ocupa toda a altura da tela */
+    flex-direction: column; /* Organiza título e blocos em coluna */
+    align-items: center; /* Centraliza os itens */
+}
+
+#pricing .section-title {
+    font-size: 36px; /* Tamanho grande para o título */
+    font-weight: bold; /* Em negrito */
+    color: #333; /* Cor escura para um bom contraste */
+    text-align: center; /* Alinha o título ao centro */
+    margin-bottom: 40px; /* Espaço abaixo do título */
+    text-transform: uppercase; /* Deixa o texto em maiúsculas */
+    letter-spacing: 2px; /* Espaçamento entre as letras */
+    width: 100%; /* Garante que o título ocupe toda a largura disponível */
+}
+
+.pricing-items-container {
+    display: flex;
+    justify-content: space-around; /* Espaça os blocos igualmente */
+    width: 100%; /* Garante que os blocos ocupem toda a largura disponível */
+}
+
+.pricing-item {
+    background-color: #fff;
+    border-radius: 8px; /* Canto arredondado */
+    padding: 20px;
+    width: 30%; /* Largura dos blocos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    text-align: center;
+    transition: transform 0.3s ease; /* Transição suave para efeito hover */
+}
+
+.pricing-item:hover {
+    transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
+}
+
+.pricing-item h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 32px;
+    color: #ff7f50;
+    margin-bottom: 20px;
+}
+
+.pricing-item ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.pricing-item ul li {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ff7f50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff7f50;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos para a seção de Treinadores */
+#trainers {
+    display: flex;
+    justify-content: space-between; /* Espaço entre os blocos */
+    align-items: center; /* Alinha os itens no centro da altura da tela */
+    padding: 60px 40px;
+    background-color: #000000;
+    height: 100vh; /* Ocupa toda a altura da tela */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a linha abaixo se necessário */
+}
+
+/* Título da seção Treinadores */
+#trainers .section-title {
+    font-size: 36px; /* Tamanho do título */
+    font-weight: bold;
+    color: #fff; /* Cor do título */
+    text-align: center;
+    width: 100%; /* Garante que o título ocupe toda a largura */
+    margin-bottom: 40px; /* Espaço abaixo do título */
+    text-transform: uppercase; /* Título em maiúsculas */
+}
+
+/* Estilos para os blocos de Treinadores */
+.trainer-item {
+    background-color: #333333;
+    border-radius: 8px;
+    width: 22%; /* Largura dos blocos */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px; /* Espaçamento entre os blocos */
+}
+
+#trainers .trainer-item img {
+    width: 100%;        /* Faz a imagem ocupar toda a largura do contêiner */
+    height: 250px;      /* Defina a altura desejada para as imagens */
+    object-fit: cover;  /* A imagem preencherá o contêiner sem distorção */
+    object-position: center; /* Centraliza a imagem dentro do contêiner */
+    border-radius: 50%; /* Faz a imagem ficar em formato circular */
+    margin-bottom: 15px; /* Espaçamento abaixo da imagem */
+}
+
+.trainer-item:hover {
+    transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
+}
+
+.trainer-item h3 {
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.trainer-item p {
+    font-size: 16px;
+    color: #ffffff;
+}
+/* Responsividade para telas menores */
+@media (max-width: 800px) {
+    #trainers{
+        height: 150vh;
+    }
+    #trainers {
+        justify-content: center; /* Centraliza os itens na tela */
+    }
+    .trainer-item {
+        width: 45%; /* Reduz a largura dos blocos para caberem dois por linha */
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos para a seção de Blog (Álbum de Fotos) */
+#blog {
+    padding: 60px 40px;
+    background-color: #fafafa;
+    text-align: center;
+}
+
+#blog h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Grade responsiva */
+    gap: 20px; /* Espaçamento entre as imagens */
+    justify-items: center;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%; /* Faz a imagem ocupar toda a altura da div */
+    object-fit: cover; /* A imagem preenche a área da div sem distorcer, cortando o que ultrapassar */
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+
+.gallery-item:hover img {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+.caption {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    font-size: 16px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .caption {
+    opacity: 1; /* Exibe a legenda ao passar o mouse */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos para o Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #333;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.footer-left h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.footer-left ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-left ul li {
+    margin-bottom: 10px;
+}
+
+.footer-left ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer-left ul li a:hover {
+    color: #ff7f50;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.logo-footer {
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.motivational-text {
+    font-size: 18px;
+    font-style: italic;
+    color: #ff7f50;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left {
+        margin-bottom: 20px;
+    }
+
+    .footer-right {
+        text-align: center;
+    }
+}
+
